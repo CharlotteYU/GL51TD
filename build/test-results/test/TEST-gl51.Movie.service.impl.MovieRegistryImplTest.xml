@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="gl51.Movie.service.impl.MovieRegistryImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-03-31T18:16:53" hostname="DESKTOP-8TTDT38" time="0.168">
+<testsuite name="gl51.Movie.service.impl.MovieRegistryImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-02T12:11:53" hostname="DESKTOP-8TTDT38" time="0.023">
   <properties/>
-  <testcase name="injection should work" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.135"/>
-  <testcase name="favorites should be empty" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.002"/>
-  <testcase name="adding a facovite should fill in the database" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.031"/>
-  <system-out><![CDATA[?[36m20:16:49.340?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
+  <testcase name="injection should work" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.006"/>
+  <testcase name="favorites should be empty" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.001"/>
+  <testcase name="adding a facovite should fill in the database" classname="gl51.Movie.service.impl.MovieRegistryImplTest" time="0.015"/>
+  <system-out><![CDATA[?[36m14:11:53.825?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
