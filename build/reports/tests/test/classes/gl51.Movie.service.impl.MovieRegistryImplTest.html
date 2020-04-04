@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.022s</div>
+<div class="counter">0s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,177 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="classMethod"></a>
+<h3 class="failures">classMethod</h3>
+<span class="code">
+<pre>io.micronaut.context.exceptions.BeanContextException: Unexpected error loading bean definition [gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinition]: failed to access class gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted from class gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass (gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted and gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass are in unnamed module of loader 'app')
+	at io.micronaut.context.AbstractBeanDefinitionReference.isPresent(AbstractBeanDefinitionReference.java:93)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidates$32(DefaultBeanContext.java:1502)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEachFrom(ConcurrentLinkedQueue.java:1037)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue$CLQSpliterator.forEachRemaining(ConcurrentLinkedQueue.java:894)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidates(DefaultBeanContext.java:1524)
+	at io.micronaut.context.DefaultApplicationContext.findBeanCandidates(DefaultApplicationContext.java:241)
+	at io.micronaut.context.DefaultBeanContext.isCandidatePresent(DefaultBeanContext.java:2740)
+	at io.micronaut.context.DefaultBeanContext.containsBean(DefaultBeanContext.java:609)
+	at io.micronaut.context.BeanDefinitionRegistry.containsBean(BeanDefinitionRegistry.java:355)
+	at io.micronaut.context.RequiresCondition.matchesPresenceOfBeans(RequiresCondition.java:543)
+	at io.micronaut.context.RequiresCondition.processPostStartRequirements(RequiresCondition.java:211)
+	at io.micronaut.context.RequiresCondition.matches(RequiresCondition.java:107)
+	at io.micronaut.context.AbstractBeanContextConditional.isEnabled(AbstractBeanContextConditional.java:47)
+	at io.micronaut.context.AbstractBeanDefinition.isEnabled(AbstractBeanDefinition.java:89)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidates$35(DefaultBeanContext.java:1523)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidates(DefaultBeanContext.java:1524)
+	at io.micronaut.context.DefaultApplicationContext.findBeanCandidates(DefaultApplicationContext.java:241)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidatesInternal$65(DefaultBeanContext.java:2556)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.lambda$compute$0(ConcurrentLinkedHashMap.java:721)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.compute(ConcurrentLinkedHashMap.java:733)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.computeIfAbsent(ConcurrentLinkedHashMap.java:710)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidatesInternal(DefaultBeanContext.java:2556)
+	at io.micronaut.context.DefaultBeanContext.getBeanDefinitions(DefaultBeanContext.java:588)
+	at io.micronaut.context.DefaultBeanContext.initializeEventListeners(DefaultBeanContext.java:1253)
+	at io.micronaut.context.DefaultBeanContext.readAllBeanDefinitionClasses(DefaultBeanContext.java:2542)
+	at io.micronaut.context.DefaultBeanContext.start(DefaultBeanContext.java:204)
+	at io.micronaut.context.DefaultApplicationContext.start(DefaultApplicationContext.java:188)
+	at io.micronaut.test.extensions.AbstractMicronautExtension.startApplicationContext(AbstractMicronautExtension.java:253)
+	at io.micronaut.test.extensions.spock.MicronautSpockExtension.startApplicationContext(MicronautSpockExtension.java:158)
+	at io.micronaut.test.extensions.AbstractMicronautExtension.beforeClass(AbstractMicronautExtension.java:174)
+	at io.micronaut.test.extensions.spock.MicronautSpockExtension.lambda$visitSpecAnnotation$0(MicronautSpockExtension.java:61)
+	at org.spockframework.runtime.extension.MethodInvocation.proceed(MethodInvocation.java:97)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalAccessError: failed to access class gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted from class gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass (gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted and gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass are in unnamed module of loader 'app')
+	at io.micronaut.context.AbstractBeanDefinitionReference.isPresent(AbstractBeanDefinitionReference.java:85)
+	... 68 more
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="classMethod"></a>
+<h3 class="failures">classMethod</h3>
+<span class="code">
+<pre>io.micronaut.context.exceptions.BeanContextException: Unexpected error loading bean definition [gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinition]: failed to access class gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted from class gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass (gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted and gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass are in unnamed module of loader 'app')
+	at io.micronaut.context.AbstractBeanDefinitionReference.isPresent(AbstractBeanDefinitionReference.java:93)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidates$32(DefaultBeanContext.java:1502)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEachFrom(ConcurrentLinkedQueue.java:1037)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue$CLQSpliterator.forEachRemaining(ConcurrentLinkedQueue.java:894)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidates(DefaultBeanContext.java:1524)
+	at io.micronaut.context.DefaultApplicationContext.findBeanCandidates(DefaultApplicationContext.java:241)
+	at io.micronaut.context.DefaultBeanContext.isCandidatePresent(DefaultBeanContext.java:2740)
+	at io.micronaut.context.DefaultBeanContext.containsBean(DefaultBeanContext.java:609)
+	at io.micronaut.context.BeanDefinitionRegistry.containsBean(BeanDefinitionRegistry.java:355)
+	at io.micronaut.context.RequiresCondition.matchesPresenceOfBeans(RequiresCondition.java:543)
+	at io.micronaut.context.RequiresCondition.processPostStartRequirements(RequiresCondition.java:211)
+	at io.micronaut.context.RequiresCondition.matches(RequiresCondition.java:107)
+	at io.micronaut.context.AbstractBeanContextConditional.isEnabled(AbstractBeanContextConditional.java:47)
+	at io.micronaut.context.AbstractBeanDefinition.isEnabled(AbstractBeanDefinition.java:89)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidates$35(DefaultBeanContext.java:1523)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidates(DefaultBeanContext.java:1524)
+	at io.micronaut.context.DefaultApplicationContext.findBeanCandidates(DefaultApplicationContext.java:241)
+	at io.micronaut.context.DefaultBeanContext.lambda$findBeanCandidatesInternal$65(DefaultBeanContext.java:2556)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.lambda$compute$0(ConcurrentLinkedHashMap.java:721)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.compute(ConcurrentLinkedHashMap.java:733)
+	at io.micronaut.core.util.clhm.ConcurrentLinkedHashMap.computeIfAbsent(ConcurrentLinkedHashMap.java:710)
+	at io.micronaut.context.DefaultBeanContext.findBeanCandidatesInternal(DefaultBeanContext.java:2556)
+	at io.micronaut.context.DefaultBeanContext.getBeansOfTypeInternal(DefaultBeanContext.java:2594)
+	at io.micronaut.context.DefaultBeanContext.getBeansOfType(DefaultBeanContext.java:638)
+	at io.micronaut.context.DefaultBeanContext.publishEvent(DefaultBeanContext.java:1131)
+	at io.micronaut.context.DefaultBeanContext.stop(DefaultBeanContext.java:240)
+	at io.micronaut.context.DefaultApplicationContext.stop(DefaultApplicationContext.java:193)
+	at io.micronaut.test.extensions.AbstractMicronautExtension.afterClass(AbstractMicronautExtension.java:229)
+	at io.micronaut.test.extensions.spock.MicronautSpockExtension.lambda$visitSpecAnnotation$1(MicronautSpockExtension.java:85)
+	at org.spockframework.runtime.extension.MethodInvocation.proceed(MethodInvocation.java:97)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.IllegalAccessError: failed to access class gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted from class gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass (gl51.Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$Intercepted and gl51.$Movie.service.impl.$MovieRegistryImplTest$MovieClient0Definition$InterceptedDefinitionClass are in unnamed module of loader 'app')
+	at io.micronaut.context.AbstractBeanDefinitionReference.isPresent(AbstractBeanDefinitionReference.java:85)
+	... 66 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,26 +242,21 @@
 </tr>
 </thead>
 <tr>
-<td class="success">adding a facovite should fill in the database</td>
-<td class="success">0.015s</td>
-<td class="success">passed</td>
+<td class="failures">classMethod</td>
+<td class="failures">0s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">favorites should be empty</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">injection should work</td>
-<td class="success">0.006s</td>
-<td class="success">passed</td>
+<td class="failures">classMethod</td>
+<td class="failures">0s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>?[36m14:11:53.825?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
+<pre>?[36m11:26:52.179?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
 </pre>
 </span>
 </div>
@@ -109,7 +268,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1</a> at 2020年4月2日 下午2:11:54</p>
+<a href="http://www.gradle.org">Gradle 6.1</a> at 2020年4月4日 上午11:26:52</p>
 </div>
 </div>
 </body>
