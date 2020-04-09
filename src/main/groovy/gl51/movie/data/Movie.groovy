@@ -1,4 +1,4 @@
-package gl51.Movie.data
+package gl51.movie.data
 
 /**
  * Represents a movie

@@ -1,2 +1,2 @@
-gl51.Movie.service.impl.$MovieClientImplDefinitionClass
-gl51.Movie.service.impl.$MovieRegistryImplDefinitionClass
+gl51.movie.service.impl.$MovieClientImplDefinitionClass
+gl51.movie.service.impl.$MovieRegistryImplDefinitionClass

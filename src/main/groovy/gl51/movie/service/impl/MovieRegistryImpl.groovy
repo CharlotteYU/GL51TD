@@ -1,8 +1,8 @@
-package gl51.Movie.service.impl
+package gl51.movie.service.impl
 
-import gl51.Movie.data.Movie
-import gl51.Movie.service.MovieClient
-import gl51.Movie.service.MovieRegistry
+import gl51.movie.data.Movie
+import gl51.movie.service.MovieClient
+import gl51.movie.service.MovieRegistry
 
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -13,7 +13,8 @@ class MovieRegistryImpl implements MovieRegistry {
 
     private List<Movie> internalRegistry = []
 
-    @Inject MovieClient movieClient
+    @Inject
+    private MovieClient movieClient
 
     @Override
     void addMovieToFavorites(String imdbID) {

@@ -1,6 +1,6 @@
-package gl51.Movie.service
+package gl51.movie.service
 
-import gl51.Movie.data.Movie
+import gl51.movie.data.Movie
 
 /**
  * stores movie
