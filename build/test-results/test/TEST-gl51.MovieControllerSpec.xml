@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gl51.MovieControllerSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-04-16T14:45:35" hostname="DESKTOP-8TTDT38" time="1.081">
+  <properties/>
+  <testcase name="testIndex" classname="gl51.MovieControllerSpec" time="0.889"/>
+  <testcase name="testFilmCreation" classname="gl51.MovieControllerSpec" time="0.192"/>
+  <system-out><![CDATA[?[36m16:45:34.627?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
